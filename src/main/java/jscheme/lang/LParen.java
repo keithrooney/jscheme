@@ -1,4 +1,4 @@
-package lexical.lang;
+package jscheme.lang;
 
 public class LParen extends Token {
     

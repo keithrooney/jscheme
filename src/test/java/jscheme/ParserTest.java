@@ -1,4 +1,4 @@
-package syntactic;
+package jscheme;
 
 import static org.junit.Assert.assertEquals;
 
@@ -6,9 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import lexical.Lexer;
-import lexical.lang.Token;
-import lexical.lang.Token.Category;
+import jscheme.lang.Token;
+import jscheme.lang.Token.Category;
 
 public class ParserTest {
 
@@ -20,7 +19,7 @@ public class ParserTest {
     
     private static final Token NUMBER = new Token("12", Category.NUMBER);
     
-    private static final Token EOS = new Token(null, Category.EOS);
+    private static final Token EOS = new Token(null, Category.EOF);
 
     private Parser parser;
     

@@ -1,4 +1,4 @@
-package lexical.lang;
+package jscheme.lang;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -7,8 +7,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import lexical.lang.Token;
-import lexical.lang.Token.Category;
+import jscheme.lang.Token;
+import jscheme.lang.Token.Category;
 
 public class TokenTest {
 

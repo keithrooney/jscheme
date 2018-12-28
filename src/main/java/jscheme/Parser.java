@@ -1,8 +1,7 @@
-package syntactic;
+package jscheme;
 
-import lexical.Lexer;
-import lexical.lang.Token;
-import lexical.lang.Token.Category;
+import jscheme.lang.Token;
+import jscheme.lang.Token.Category;
 
 public class Parser {
 
@@ -21,7 +20,7 @@ public class Parser {
     private void program() {
         next();
         operation();
-        expect(Category.EOS);
+        expect(Category.EOF);
     }
 
     private void operation() {

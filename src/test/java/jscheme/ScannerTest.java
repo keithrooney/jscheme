@@ -1,4 +1,4 @@
-package lexical;
+package jscheme;
 
 import static org.junit.Assert.assertEquals;
 
@@ -12,7 +12,7 @@ import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 import org.mockito.Mockito;
 
-import lexical.Scanner;
+import jscheme.Scanner;
 
 public class ScannerTest {
 

@@ -1,5 +1,6 @@
-package main;
+package jscheme;
 
+import java.io.Closeable;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -8,11 +9,7 @@ import java.io.PushbackReader;
 import java.io.Reader;
 import java.io.StringReader;
 
-import lexical.Lexer;
-import lexical.Scanner;
-import syntactic.Parser;
-
-public class JScheme {
+public class Interpreter implements Closeable {
 
     private Lexer lexer;
     
@@ -20,7 +17,7 @@ public class JScheme {
 
     private Parser parser;
 
-    public JScheme(String input) throws IOException {
+    public Interpreter(String input) throws IOException {
         initialize(input);
     }
     
@@ -46,18 +43,8 @@ public class JScheme {
         parser.setLexer(lexer);
     }
 
-    private void cleanup() throws IOException {
+    public void close() throws IOException {
         scanner.getReader().close();
-    }
-    
-    public void run() throws IOException {
-        parser.parse();
-        cleanup();
-    }
-    
-    public static void main(String[] args) throws IOException {
-        JScheme jScheme = new JScheme("/home/keith/Desktop/test.scm");
-        jScheme.run();
     }
     
 }

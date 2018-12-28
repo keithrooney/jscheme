@@ -1,4 +1,4 @@
-package lexical;
+package jscheme;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -8,12 +8,12 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import lexical.Lexer;
-import lexical.Scanner;
-import lexical.lang.EOS;
-import lexical.lang.LParen;
-import lexical.lang.RParen;
-import lexical.lang.Token;
+import jscheme.Lexer;
+import jscheme.Scanner;
+import jscheme.lang.EOF;
+import jscheme.lang.LParen;
+import jscheme.lang.RParen;
+import jscheme.lang.Token;
 
 public class LexerTest {
 
@@ -59,7 +59,7 @@ public class LexerTest {
         Mockito.when(mockScanner.next()).thenReturn(32).thenReturn(32).thenReturn(-1);
         Mockito.when(mockScanner.read()).thenReturn(-1);
         Token token = lexer.getToken();
-        assertTrue(token instanceof EOS);
+        assertTrue(token instanceof EOF);
         Mockito.verify(mockScanner, Mockito.times(3)).next();
         Mockito.verify(mockScanner, Mockito.times(3)).read();
     }

@@ -1,11 +1,11 @@
-package lexical;
+package jscheme;
 
-import lexical.lang.EOS;
-import lexical.lang.LParen;
-import lexical.lang.Number;
-import lexical.lang.Operator;
-import lexical.lang.RParen;
-import lexical.lang.Token;
+import jscheme.lang.EOF;
+import jscheme.lang.LParen;
+import jscheme.lang.Number;
+import jscheme.lang.Operator;
+import jscheme.lang.RParen;
+import jscheme.lang.Token;
 
 public class Lexer {
 
@@ -36,7 +36,7 @@ public class Lexer {
 			    return new Number(builder.toString());
 			}
 		}
-		return new EOS();
+		return new EOF();
 	}
 
 	private void skipWhitespaces() {

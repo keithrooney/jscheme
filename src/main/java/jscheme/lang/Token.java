@@ -1,17 +1,15 @@
-package lexical.lang;
+package jscheme.lang;
 
 import java.util.Objects;
 
 public class Token {
 
     public enum Category {
-        LPAREN, RPAREN,
-        
+        LPAREN, 
+        RPAREN,
         OPERATOR,
-        
         NUMBER,
-        
-        EOS
+        EOF
     }
     
 	private String lexeme;

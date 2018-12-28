@@ -1,11 +1,11 @@
-package lexical.lang;
+package jscheme.lang;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import lexical.lang.Operator;
-import lexical.lang.Token.Category;
+import jscheme.lang.Operator;
+import jscheme.lang.Token.Category;
 
 public class OperatorTest {
 

@@ -1,4 +1,4 @@
-package lexical;
+package jscheme;
 
 import java.io.IOException;
 import java.io.PushbackReader;

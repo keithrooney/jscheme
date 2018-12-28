@@ -1,4 +1,4 @@
-package lexical.lang;
+package jscheme.lang;
 
 public class Operator extends Token {
 

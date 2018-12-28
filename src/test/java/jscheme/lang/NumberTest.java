@@ -1,11 +1,11 @@
-package lexical.lang;
+package jscheme.lang;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import lexical.lang.Number;
-import lexical.lang.Token.Category;
+import jscheme.lang.Number;
+import jscheme.lang.Token.Category;
 
 public class NumberTest {
 
